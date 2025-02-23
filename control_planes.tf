@@ -24,6 +24,8 @@ module "control_planes" {
   dns_servers                  = var.dns_servers
   k3s_registries               = var.k3s_registries
   k3s_registries_update_script = local.k3s_registries_update_script
+  k3s_kubelet_config               = var.k3s_kubelet_config
+  k3s_kubelet_config_update_script = local.k3s_kubelet_config_update_script
   cloudinit_write_files_common = local.cloudinit_write_files_common
   cloudinit_runcmd_common      = local.cloudinit_runcmd_common
   swap_size                    = each.value.swap_size
